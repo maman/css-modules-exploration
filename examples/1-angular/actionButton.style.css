@@ -1,0 +1,35 @@
+@value warning, warning-dark, alert, alert-dark, disabled, disabled-dark from './colors.css';
+
+.normal,
+.warning,
+.alert,
+.disabled {
+  composes: Button from './lib.css';
+}
+
+.warning {
+  background-color: warning;
+  box-shadow: 0 5px 0 warning-dark;
+  border-color: warning-dark;
+}
+
+.warning:active {
+  box-shadow: 0 1px 0 warning-dark;
+}
+
+.alert {
+  background-color: alert;
+  box-shadow: 0 5px 0 alert-dark;
+  border-color: alert-dark;
+}
+
+.alert:active {
+  box-shadow: 0 1px 0 alert-dark;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: disabled;
+  box-shadow: 0 5px 0 disabled-dark;
+  border-color: disabled-dark;
+}

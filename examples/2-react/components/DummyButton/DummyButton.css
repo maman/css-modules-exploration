@@ -1,0 +1,27 @@
+.dummy {
+  composes: Button makeAfterBlock from '../../lib.css';
+  width: 120px;
+  color: white;
+}
+
+.dummy::after {
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999em;
+  background-color: red;
+  transition: transform .3s linear;
+  animation: aroundTheWooorld .5s infinite;
+}
+
+.dummy:hover::after {
+  transform: scale(2);
+}
+
+@keyframes aroundTheWooorld {
+  0% { transform: translate(0, 22px) }
+  25% { transform: translate(-114px, 22px) }
+  50% { transform: translate(-114px, 0) }
+  /* 100% { transform: translate(0, 0) } */
+}

@@ -1,0 +1,60 @@
+/**
+ * Base button
+ */
+.Button {
+  background-color: #00aeef;
+  text-shadow: 0 -1px 0 rgba(250, 250, 250, .4);
+  box-shadow: 0 5px 0 #0062A3;
+  border-color: #0062A3;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 5px;
+  color: #222;
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+/**
+ * Button behavior
+ */
+.Button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #0062A3;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+/**
+ * Button styles
+ */
+.Button--warning {
+  background-color: #fff000;
+  box-shadow: 0 5px 0 #B3A400;
+  border-color: #B3A400;
+}
+
+.Button--warning:active {
+  box-shadow: 0 1px 0 #B3A400;
+}
+
+.Button--alert {
+  background-color: #ed008c;
+  box-shadow: 0 5px 0 #A10040;
+  border-color: #A10040;
+}
+
+.Button--alert:active {
+  box-shadow: 0 1px 0 #A10040;
+}
+
+.Button--disabled {
+  pointer-events: none;
+  background-color: #DDD;
+  box-shadow: 0 5px 0 #BBB;
+  border-color: #BBB;
+}
